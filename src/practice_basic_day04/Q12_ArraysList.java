@@ -17,27 +17,35 @@ public class Q12_ArraysList {
          *
          */
 
+        //Kullanicidan bir liste uzunlugu ve liste uzunlugu kadar eleman girmesini istiyoruz ve onlar eklenecek add methodu
+        //uzunluk 3 ise 3 de eleman girecek yani iki kez sacnner objesi yapacagiz
+       // sonunda da tekrarli liste olusturup bunu yazdiran bir method olusturacagiz
+
         Scanner scan = new Scanner(System.in);
-        System.out.print("Olusturmak istediginiz listin uzunlugunu giriniz : ");
-        int listUzunluk = scan.nextInt();
+        System.out.print("Olusturmak istediginiz listin uzunlugunu giriniz : ");  //kullaniciya sorduk
+        int listUzunluk = scan.nextInt();  //ve gelen girdiyi okuduk
 
-        List<Integer> list = new ArrayList<>();
-        System.out.println("girdiginiz list uzunlugu kadar eleman ekleyiniz ..");
 
-        for (int i = 0; i < listUzunluk; i++){
-            list.add(scan.nextInt());
+
+        List<Integer> Olusturulanlist = new ArrayList<>();// liste olusturmam gerek ve integerlardan olusuyor
+        System.out.println("girdiginiz list uzunlugu kadar eleman ekleyiniz .."); //eleman ekleyecegimiz icin sorduk
+        //defalarca eleman girilecegi icin for dongusu
+        for (int i = 0; i < listUzunluk; i++){ //0.indexten baslasin girilen inputun uzunlugu kaaar saysin
+            //bunlari listeye eklememiz lazim
+            Olusturulanlist.add(scan.nextInt());   //kullanicidan her aldigini liste ekle
         }
 
-        tekrarliEleman(list);
+        //method olusturma
+        tekrarliEleman(Olusturulanlist);
 
     }
 
-    private static void tekrarliEleman(List<Integer> ls) {
+    private static void tekrarliEleman(List<Integer> Olusturulanlist) {
         List<Integer>tekrarliList = new ArrayList<>();
-        for (int i = 0; i < ls.size(); i++){ //ilk listem
-            for (int j = i+1; j <ls.size(); j++){ //diger indexleri karislastiracak
-                if(ls.get(i) == ls.get(j) && !tekrarliList.contains(ls.get(i))){
-                    tekrarliList.add(ls.get(i));
+        for (int i = 0; i < Olusturulanlist.size(); i++){ //elemanlari aldigim ilk liste
+            for (int j = i+1; j <Olusturulanlist.size(); j++){ //diger indexleri karislastiracak
+                if(Olusturulanlist.get(i) == Olusturulanlist.get(j) && !tekrarliList.contains(Olusturulanlist.get(i))){
+                    tekrarliList.add(Olusturulanlist.get(i));
                 }
             }
         }

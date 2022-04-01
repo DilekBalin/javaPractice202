@@ -18,8 +18,8 @@ public class Q03_Arrays {
         str = str.replace("Hey", "Bye");
 
         //3.adim : arr olustur
-        String [] arr = new String[1];
-        arr[0] =str;
+        String [] arr = new String[1];//1 elemanli
+        arr[0] =str;// bir elemanli ise 0.indexindedir
         System.out.println(Arrays.toString(arr));
 
         //2.yol ;

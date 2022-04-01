@@ -18,7 +18,7 @@ public class Q04_Arrays {
         for (int i = 0; i < arr.length; i++) { //arr kontrol
             for (int j = i + 1; j < arr.length; j++) { //2. sayi aliyoruz
                 if (arr[i] + arr[j] == istenenToplam) {
-                    System.out.println(arr[i] + " ve " + arr[j] + " toplami :" + istenenToplam);
+                    System.out.println(arr[i] + " ve " + arr[j] + " toplami =" + istenenToplam+ " 'dur");
                 }
             }
         }
