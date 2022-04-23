@@ -1,4 +1,4 @@
-package interwievQuestions;
+package interwievQuestions1;
 
 import java.util.Scanner;
 

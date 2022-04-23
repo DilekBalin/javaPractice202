@@ -1,4 +1,4 @@
-package interwievQuestions;
+package interwievQuestions1;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,7 +13,7 @@ public class GroupSolution01 {
             abaa   ==> a=3  b=1
     */
         Scanner scan=new Scanner(System.in);
-        System.out.print("bir cumle kelime giriniz : ");
+        System.out.print("bir cumle giriniz : ");
         String str=scan.nextLine();
         String arr[]=str.split("");
 
